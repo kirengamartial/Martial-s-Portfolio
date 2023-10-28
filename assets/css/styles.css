@@ -359,6 +359,9 @@ img {
 }
 
 /*==================== BUTTONS ====================*/
+button {
+  border: none;
+}
 .button {
   display: inline-block;
   background-color: var(--first-color);
@@ -376,7 +379,9 @@ img {
   margin-left: var(--mb-0-5);
   transition: .3s;
 }
-
+.king {
+  color: #6E57e0;
+}
 .button--white {
   background-color: #fff;
   color: var(--first-color);
