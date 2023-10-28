@@ -233,3 +233,45 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true
  })
+
+ // ======= EMAIL js ======
+const contactForm = document.getElementById('contact-form'),
+      contactName = document.getElementById('contact-name'),
+      contactEmail = document.getElementById('contact-email'),
+      contactProject = document.getElementById('contact-project'),
+      projectType = document.getElementById('project-type'),
+      contactMessage = document.getElementById('contact-message')
+      
+
+const sendEmail = (e) => {
+    e.preventDefault()
+    // check if the field has a value
+    if(contactName.vallue === '' || contactEmail.value === '' || contactProject.value === '' || projectType.value === '') {
+
+        contactMessage.classList.remove('color-blue')
+        contactMessage.classList.add('color-red')
+        contactMessage.textContent = 'Fill in all the input fields'
+    }else {
+        // serviceID - templateID - #form - publickey
+        emailjs.sendForm('service_o50cr4o', 'template_mtn81zh', '#contact-form', 'rXR9ecRyT8S4Z1Hlg')
+           .then(() => {
+            contactMessage.classList.add('color-blue')
+            contactMessage.textContent = 'Message sent'
+
+            setTimeout(() => {
+                contactMessage.textContent = ''
+            }, 5000)
+           },(error) =>{
+            alert('OOPS! SOMETHNG WENT WRONG...', error)
+           })
+           
+        //    to clear the input fields 
+        contactName.value = ''
+        contactEmail.value = ''
+        contactProject.value = ''
+        projectType.value = ''
+    }
+
+}   
+contactForm.addEventListener('submit', sendEmail)   
+

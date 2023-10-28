@@ -838,7 +838,10 @@
                             <i class="uil uil-phone contact__icon"></i>
                             <div>
                                 <h3 class="contact__title">Call Me</h3>
-                                <span class="contact__subtitle">999-777-666</span>
+                                <span class="contact__subtitle">+250780681129</span>
+                                <a href="https://api.whatsapp.com/send?phone=250780681129&text=Hello, more information!" target="_blank">
+                                    <i class="uil uil-message button--icon"></i>
+                                </a>
                             </div>
                         </div>
 
@@ -848,7 +851,7 @@
 
                             <div>
                                 <h3 class="contact__title">Email</h3>
-                                <span class="contact__subtitle">kirengamartial@gmail.com</span>
+                                <span class="contact__subtitle">martialkirenga21@gmail.com</span>
                             </div>
                         </div>
 
@@ -863,34 +866,36 @@
                     </div>
 
 
-                    <form action="#" class="contact__form grid">
+                    <form action="#" class="contact__form grid" id="contact-form">
                         <div class="contact__inputs grid">
                             <div class="contact__contact">
                                 <label for="" class="contact__label">Name</label>
-                                <input type="text" class="contact__input">
+                                <input type="text" name="user_name" class="contact__input" id="contact-name">
                             </div>
 
                             <div class="contact__contact">
                                 <label for="" class="contact__label">Email</label>
-                                <input type="email" class="contact__input">
+                                <input type="email" name="user_email" class="contact__input" id="contact-email">
                             </div>
                         </div>
 
                         <div class="contact__contact">
                             <label for="" class="contact__label">Project</label>
-                            <input type="text" class="contact__input">
+                            <input type="text" id="project-type" class="contact__input" name="project_name">
                         </div>
 
                         <div class="contact__contact">
                             <label for="" class="contact__label">Message</label>
-                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                            <textarea id="contact-project" name="user_message" cols="0" rows="7" class="contact__input"></textarea>
                         </div>
 
+                        <p class="contact__message" id="contact-message"></p>
                         <div>
-                            <a href="#" class="button button--flex">
+
+                            <button type="submit" class="button button--flex">
                                 Send Message
                                 <i class="uil uil-message button--icon"></i>
-                            </a>
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -952,6 +957,9 @@
         <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>  
         <!--==================== SWIPER JS ====================-->
         <script src="assets/js/swiper-bundle.min.js"></script>
+
+          <!--==================== EMAIL JS ====================-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
         <!--==================== MAIN JS ====================-->
         <script src="assets/js/main.js"></script>
