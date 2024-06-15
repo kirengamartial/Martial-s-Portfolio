@@ -227,7 +227,7 @@ ScrollReveal().reveal('.home__data p, .about__data, .project__img, .footer__link
 // ======= typed js ======
 
 const typed = new Typed('.multiple-text', {
-    strings: ['Backend Developer', 'UI/UX developers', 'Blogger'],
+    strings: ['Backend Developer', 'UI/UX developer', 'Blogger'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
